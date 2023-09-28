@@ -38,7 +38,19 @@ class _Criando extends State<Criando> {
                 });
               },
               child: const Text("Somar"),
-            )
+            ),
+            TextField(
+              decoration: InputDecoration(
+             labelText: "Informe seu nome",
+             
+              ) ,
+            onChanged:(text){
+
+
+             }
+            ),
+
+
           ],
         ),
       ),
