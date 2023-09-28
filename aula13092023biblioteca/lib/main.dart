@@ -1,27 +1,12 @@
+import 'package:aula13092023biblioteca/home.dart';
 import 'package:flutter/material.dart';
+import 'package:aula13092023biblioteca/livroPrefacio.dart';
+
 
 void main() {
-  runApp(const MyApp());
+  runApp(const MaterialApp(
+home:prefacioAdministreSeuTempo(),
+debugShowCheckedModeBanner: false,
+
+  ));
 }
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // This widget is the root of your application.
-  @override
-
-  Widget build(BuildContext context) {
-         return MaterialApp(
-          routes: {
-            '/livro':(context) => const livro();
-            
-            
-            },
-
-
-
-          };
-          initialRoute: ,
-         );
-  }
-}//mexer no childaspecratio 0.6, abixo do gidView:
