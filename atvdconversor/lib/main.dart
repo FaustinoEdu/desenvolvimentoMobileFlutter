@@ -16,23 +16,17 @@ class Conversor extends StatefulWidget {
 class _Conversor extends State<Conversor> {
   @override
   Widget build(BuildContext context) {
-
+     
 
 
 
     return MaterialApp(
+     debugShowCheckedModeBanner: false,
       home: ControllerTabs(),
-      /*Scaffold(
-        appBar: AppBar(
-          title: const Text("Conversor Universal de Unidades"),
-          centerTitle: true,
-          
-        ),
-        
-          
-        
-    
-      ),*/
+     
+
+
+
     );
   }
 }
@@ -52,6 +46,16 @@ class ControllerTabs extends StatelessWidget {
       length: tabs.length,
       child: Scaffold(
         appBar: AppBar(
+         backgroundColor: Color.fromARGB(255, 28, 28, 29),         
+          
+          title: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children:[
+             const Text("Conversor Universal de Unidades"),
+            ]
+          ),
+           
+
           bottom: const TabBar(
             tabs: tabs,
           ),
@@ -61,7 +65,7 @@ class ControllerTabs extends StatelessWidget {
             return Center(
               child: Column(
                 children: [
-                  Comprimento(),
+                 ComprimentoDropdown(),
                   Massa(),
                   Tempo(),
                 ],
