@@ -20,7 +20,7 @@ class _Comprimento extends State<Comprimento> {
           body: Column(
         children: [
           TextField(
-            decoration: const InputDecoration(  labelText: 'Digite o valor a ser convertido em Kilometro '),
+            decoration: const InputDecoration(  labelText: 'Digite o valor a ser convertido em kilometro '),
            
            onChanged: ( String valorPassado){
            
@@ -58,7 +58,7 @@ class _Comprimento extends State<Comprimento> {
 
  void ConversorParaCentimetros (double valor) {
   
-valorCentimetros = valor*10000;
+valorCentimetros = valor*100000;
 
 }
 void ConversorParaMetros(double valor) {
