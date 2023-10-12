@@ -24,9 +24,6 @@ class _Conversor extends State<Conversor> {
      debugShowCheckedModeBanner: false,
       home: ControllerTabs(),
      
-
-
-
     );
   }
 }
@@ -61,17 +58,15 @@ class ControllerTabs extends StatelessWidget {
           ),
         ),
         body: TabBarView(
-          children: tabs.map((Tab tab) {
-            return Center(
-              child: Column(
-                children: [
-                 ComprimentoDropdown(),
+         
+                
+               children:[ 
+                 Comprimento(),
                   Massa(),
                   Tempo(),
-                ],
-              ),
-            );
-          }).toList(),
+                
+               ]
+        
         ),
       ),
     );

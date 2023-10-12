@@ -1,49 +1,68 @@
+import 'package:atvdconversor/main.dart';
 import 'package:flutter/material.dart';
 
-class ComprimentoDropdown extends StatefulWidget {
-  const ComprimentoDropdown({Key? key}) : super(key: key);
+double valorRecebido=0;
+double valorCentimetros=0;
+double valorMetros=0;
 
-  @override
-  State<ComprimentoDropdown> createState() => _ComprimentoDropdownState();
+class Comprimento extends StatefulWidget {
+  _Comprimento createState() => _Comprimento();
 }
 
-class _ComprimentoDropdownState extends State<ComprimentoDropdown> {
-  String opcaoSelecionada = tiposDeConvercoes.first;
+class _Comprimento extends State<Comprimento> {
+
 
   @override
   Widget build(BuildContext context) {
-    return DropdownButton<String>(
-      value: opcaoSelecionada,
-      onChanged: (String? value) {
-        setState(() {
-          opcaoSelecionada = value!;
-        });
-      },
-      items: tiposDeConvercoes.map((String value) {
-        return DropdownMenuItem<String>(
-          value: value,
-          child: Text(value),
-        );
-      }).toList(),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+          body: Column(
+        children: [
+          TextField(
+            decoration: const InputDecoration(  labelText: 'Digite o valor a ser convertido em Kilometro '),
+           
+           onChanged: ( String valorPassado){
+           
+           valorRecebido = double.parse(valorPassado);
+
+           }
+           
+        
+          ),
+
+          ElevatedButton(
+            onPressed:(){
+
+            setState(() {
+          ConversorParaCentimetros(valorRecebido);
+          ConversorParaMetros(valorRecebido);
+
+          });
+          },
+          child: const Text('Converter'),),
+        
+        
+           Text(valorMetros.toString()+ "m"),
+          Text(valorCentimetros.toString()+ "cm"),
+         
+
+        
+          
+        ],
+
+      )),
     );
- 
   }
 }
-const List<String> tiposDeConvercoes = <String>['km', 'hm', 'dam', 'm', 'dm', 'cm', 'mm'];
 
-void main() {
-  runApp(
-    MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Conversor de Comprimento'),
-        ),
-        body: Center( 
-          child: ComprimentoDropdown(),
-        ),
-      ),
-    ),
-  );
+ void ConversorParaCentimetros (double valor) {
+  
+valorCentimetros = valor*10000;
+
 }
+void ConversorParaMetros(double valor) {
+  
+valorMetros= valor*1000;
 
-
+}

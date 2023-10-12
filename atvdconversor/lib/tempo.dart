@@ -7,6 +7,7 @@ class _Tempo extends State<Tempo> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
           body: Column(
         children: [],
