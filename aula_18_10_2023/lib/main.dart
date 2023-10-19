@@ -3,6 +3,7 @@ import 'package:aula_18_10_2023/models/soma.dart';
 import 'package:flutter/material.dart';
 import 'page/principal.dart';
 import 'package:provider/provider.dart';
+import 'page/page2.dart';
 
 void main() =>runApp(
   ChangeNotifierProvider(
