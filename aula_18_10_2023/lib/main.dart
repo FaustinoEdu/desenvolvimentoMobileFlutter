@@ -1,10 +1,18 @@
+
+import 'package:aula_18_10_2023/models/soma.dart';
 import 'package:flutter/material.dart';
 import 'page/principal.dart';
+import 'package:provider/provider.dart';
 
-void main() =>runApp(const MyApp());
-
+void main() =>runApp(
+  ChangeNotifierProvider(
+    create: (context)=> Soma(),
+     child: const  MyApp(),
+     ),
+);
 
 class MyApp extends StatelessWidget {
+  
   const MyApp({super.key});
 
   
@@ -13,7 +21,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
     routes: {
      '/principal':(context)=> Principal(),
-
+     '/page2':(context)=> const Page2(),
     },
     initialRoute: '/principal',
 
