@@ -29,7 +29,14 @@ Container(
 ),
 Consumer<Soma>(builder: (context, somar, child) => Text(somar.valor.toString(),),
 ),
-ElevatedButton(onPressed: (){Navigator.pushNamed(context, '/page2');}, child: Text ('Pagina2'))
+
+ElevatedButton(onPressed: (){Navigator.pushNamed(context, '/page2');},
+ child: Text ('Pagina2')),
+
+ElevatedButton(onPressed: (){Navigator.pushNamed(context, '/login');},
+ child: Text ('login'))
+
+
 ],
 
 

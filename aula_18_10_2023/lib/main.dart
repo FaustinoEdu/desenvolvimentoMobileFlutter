@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'page/principal.dart';
 import 'package:provider/provider.dart';
 import 'page/page2.dart';
-
+import 'page/form.dart';
 void main() =>runApp(
   ChangeNotifierProvider(
     create: (context)=> Soma(),
@@ -23,6 +23,7 @@ class MyApp extends StatelessWidget {
     routes: {
      '/principal':(context)=> Principal(),
      '/page2':(context)=> const Page2(),
+     '/login':(context) => const Login(),
     },
     initialRoute: '/principal',
 
